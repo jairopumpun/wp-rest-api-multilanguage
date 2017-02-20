@@ -16,11 +16,12 @@ function activation_check() {
 		is_admin() &&
 		current_user_can('activate_plugins') &&
 		(
-			!is_plugin_active('sitepress-multilingual-cms/sitepress.php') ||
+			!is_plugin_active('sitepress-multilingual-cms/sitepress.php') 
+				/*||
             (
                 !is_plugin_active('rest-api/plugin.php') &&
                 !is_plugin_active('json-rest-api/plugin.php')
-            )
+            )*/
 		)
 	) {
         add_action('admin_notices','activation_notice');
